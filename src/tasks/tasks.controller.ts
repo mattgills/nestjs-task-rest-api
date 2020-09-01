@@ -1,4 +1,4 @@
-import { Controller, Get, Param, ParseUUIDPipe, Post, HttpCode, Body, Put } from '@nestjs/common';
+import { Controller, Get, Param, ParseUUIDPipe, Post, HttpCode, Body, Put, Delete } from '@nestjs/common';
 import { TasksService } from './tasks.service';
 import { CreateTaskDto } from 'src/shared/dtos/create-task.dto';
 
@@ -17,12 +17,17 @@ export class TasksController {
     }
 
     @Post()
-    create(@Body() task: CreateTaskDto) {
+    createTask(@Body() task: CreateTaskDto) {
         return this.tasksService.create(task);
     }
 
     @Put(':id')
-    update(@Param('id') id: string, @Body() task: CreateTaskDto) {
+    updateTask(@Param('id') id: string, @Body() task: CreateTaskDto) {
         return this.tasksService.update(id, task);
+    }
+
+    @Delete(':id')
+    deleteTask(@Param('id') id: string) {
+        return this.tasksService.delete(id);
     }
 }

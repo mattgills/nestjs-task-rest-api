@@ -25,4 +25,8 @@ export class TasksService {
     async update(id: string, task: CreateTaskDto) {
         return this.taskModel.updateOne({ _id: id }, task);
     }
+
+    async delete(id: string) {
+        return this.taskModel.deleteOne({ _id: id });
+    }
 }
