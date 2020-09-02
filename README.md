@@ -24,9 +24,9 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Docker Deployment
+1. Run `docker build --rm -f Dockerfile -t task-angular-frontend:v1 .` to build the container image.
+2. Run `docker-compose up -d` to deploy/run the container instance.
 
 ## Installation
 
