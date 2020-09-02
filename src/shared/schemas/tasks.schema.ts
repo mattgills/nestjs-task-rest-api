@@ -4,9 +4,9 @@ import { ApiProperty } from '@nestjs/swagger';
 
 @Schema()
 export class Task extends Document {
-    @ApiProperty()
-    @Prop({ required: true})
-    _id: string;
+    // @ApiProperty()
+    // @Prop({ required: true})
+    // _id: string;
 
     @ApiProperty()
     @Prop({ required: true})
