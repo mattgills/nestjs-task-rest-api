@@ -1,8 +1,8 @@
 import { Controller, Get, Param, Post, Body, Put, Delete } from '@nestjs/common';
 import { TasksService } from './tasks.service';
-import { CreateTaskDto } from 'src/shared/dtos/create-task.dto';
+import { CreateTaskDto } from '../shared/dtos/create-task.dto';
+import { Task } from '../shared/schemas/tasks.schema';
 import { ApiTags, ApiResponse } from '@nestjs/swagger';
-import { Task } from 'src/shared/schemas/tasks.schema';
 
 @ApiTags('tasks')
 @Controller('tasks')
