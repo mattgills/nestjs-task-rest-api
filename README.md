@@ -28,6 +28,9 @@
 1. Run `docker build --rm -f Dockerfile -t task-angular-frontend:v1 .` to build the container image.
 2. Run `docker-compose up -d` to deploy/run the container instance.
 
+## Swagger Documenation Access
+Access `localhost:3000/api` to view swagger docs
+
 ## Installation
 
 ```bash
