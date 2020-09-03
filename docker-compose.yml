@@ -6,7 +6,7 @@ services:
     ports:
       - '27000:27017'
     networks:
-      - ibm-network
+      - default
   api:
     container_name: ibm-task-api
     image: task-rest-api:v1
@@ -14,11 +14,14 @@ services:
     ports:
       - '3000:3000'
     depends_on:
-      - 'database'
+      - database
     environment:
-      - connection=mongodb://database:27000/local
+      - DB_HOST=ibm-task-mongo-dev
+      - DB_PORT=27017
+      - DB_NAME=tasks_db
     networks:
-      - ibm-network
+      - default
 networks:
-  ibm-network:
-    external: true
+  default:
+    external:
+      name: ibm-network
