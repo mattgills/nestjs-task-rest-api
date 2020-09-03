@@ -24,9 +24,12 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Docker Deployment
+1. Run `docker build --rm -f Dockerfile -t task-angular-frontend:v1 .` to build the container image.
+2. Run `docker-compose up -d` to deploy/run the container instance.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Swagger Documenation Access
+Access `localhost:3000/api` to view swagger docs
 
 ## Installation
 
